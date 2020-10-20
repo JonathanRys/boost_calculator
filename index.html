@@ -1,0 +1,66 @@
+<html lang="en_US">
+<head>
+    <meta charset="utf-8" />
+    <title>Boost Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="alliance-info">
+            <label>
+                Alliance Level
+                <input id="alliance-level" type="number" min="1" max="80" />
+            </label>
+            <label>
+                Maximum Daily Donations (M)
+                <input id="maximum-daily-donations" type="number" min="1" max="98" />
+            </label>
+            <label>
+                Members
+                <div>
+                    <input id="num-members" type="number" min="1" max="65" /> / <span id="max-members"></span>
+                </div>
+            </label>
+            <label>
+                Cost of Next Alliance Upgrade
+                <span id="cost-of-next-upgrade"></span>
+            </label>
+        </div>
+        <div class="unit-boosts"></div>
+        <div class="obstacle-boosts"></div>
+    </div>
+
+    <script src="./js/alliance_data.js"></script>
+
+    <script src="./js/elite_unit_boosts.js"></script>
+    <script src="./js/elite_obstacle_boosts.js"></script>
+
+    <script>
+        // JS goes here
+        window.onload = () => {
+            // Declare handlers and reusable code
+            const setAllianceData = (level) => {
+                const maxMembers = numberOfMembers[level];
+                const costOfNextUpgrade = costToUpgrade[level];
+
+                document.querySelector('#num-members').max = maxMembers;
+                document.querySelector('#max-members').textContent = maxMembers;
+                document.querySelector('#cost-of-next-upgrade').textContent = costOfNextUpgrade.toLocaleString();
+            };
+
+            // Attach event handlers
+            document.querySelector('#alliance-level').onchange = (e) => {
+                const allianceLevel = e.target.value;
+                // @todo validate data
+                setAllianceData(allianceLevel);
+
+                // Save the new state to local storage
+                localStorage.setItem('allianceLevel', allianceLevel);
+            }
+
+            // Load saved data from local storage
+            setAllianceData(localStorage.getItem('allianceLevel') || 1);
+        };
+    </script>
+</body>
+</html>

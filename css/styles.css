@@ -1,0 +1,24 @@
+@charset 'utf-8';
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.alliance-info {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.alliance-info label {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.alliance-info input {
+    border-radius: 5px;
+}
