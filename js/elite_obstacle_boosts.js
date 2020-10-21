@@ -1,10 +1,10 @@
 // Elite Obstacle Boosts
 const poisonArrowTowerKey = ['Alliance Level', 'Poison Damage (%)', 'Health (%)'];
-
+// Confirmed 10/21/2020 - JR
 const poisonArrowTower = {
-    1: [5, 75, 80],
-    2: [7, 90, 85],
-    3: [16, 105, 90],
+    1: [5, 75, 80], // (942,500 12hr)
+    2: [7, 90, 90], // 1,230, 000 16hr
+    3: [16, 105, 100], // 1,560,000 20hr
     4: [24, 120, 110] // 1,885,000 1day
 };
 
@@ -98,7 +98,7 @@ const cursedCenotaph = {
 const deathlyDetonatorKey = ['Alliance Level', 'Health (%)'];
 // lvl 2 health is not confirmed
 const deathlyDetonator = {
-    1: [66, 5],
+    1: [66, 5], // (1,865,000 6hr)
     2: [73, 10], // 1,875,00 8hr
     3: [80, 20],
 };

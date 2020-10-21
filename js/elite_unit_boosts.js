@@ -10,7 +10,7 @@ const blazingKnight = {
     6: [23, 110, 110],
     7: [32, 120, 120],
     8: [40, 130, 130],
-    9: [51, 135, 150] // 1,885,000 16hr
+    9: [51, 135, 150] // 1,885,000 16hr @ lvl 75 - 897,000 @ lvl 68
 };
 
 const powerArcherKey = ['Alliance Level', 'Blunt Damage (%)', 'Health (%)'];
@@ -93,12 +93,11 @@ const witchDoctor = {
 const demolisherKey = ['Alliance Level', 'Health (%)', 'Knockback (%)'];
 
 const demolisher = {
-    1: [72, 25, 25], // 1,810,000 6hr
+    1: [72, 25, 25], // (1,810,000 6hr)
     2: [80, 50, 50]
 };
 
 // New Elite Unit Boosts
-
 const winterWraithKey = ['Alliance Level', 'Health (%)', 'Ice Damage (%)'];
 
 const winterWraith = {
